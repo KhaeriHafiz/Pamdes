@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <title>Dashboard - Pamdes</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Main CSS-->
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <!-- Font-icon css-->
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body class="app sidebar-mini">
+  <!-- Navbar-->
+  <header class="app-header">
+    <a class="app-header__logo" href="index.html">
+      <img class="mb-1 pb-1" src="images/Logo.png" width="80%" alt="">
+    </a>
+    <!-- Sidebar toggle button--><a class="app-sidebar__toggle" href="#" data-toggle="sidebar"
+      aria-label="Hide Sidebar"></a>
+    <!-- Navbar Right Menu-->
+    <ul class="app-nav">
+      <li><a class="app-nav__item" style="color: var(--point)" href="#" data-toggle="dropdown"
+          aria-label="Open Profile Menu"><i class="fa-solid fa-calendar-week"></i>
+          <b>Sabtu, 12
+            Februari
+            2022,
+            22:37 WITA</b></a>
+      </li>
+    </ul>
+  </header>
+  <!-- Sidebar menu-->
+  <div class="app-sidebar__overlay" data-toggle="sidebar"></div>
+  <aside class="app-sidebar">
+    <ul class="app-menu">
+      <li>
+        <a class="app-menu__item active" href="index.html"><i class="app-menu__icon fa-solid fa-house"></i><span
+            class="app-menu__label">Dashboard</span></a>
+      </li>
+      <li>
+        <a class="app-menu__item" href="Pembayaran.html"><i class=" app-menu__icon fa-solid fa-credit-card"></i><span
+            class="app-menu__label">Pembayaran</span></a>
+      </li>
+      <li>
+        <a class="app-menu__item" href="data-pelanggan.html"><i class="app-menu__icon fa-solid fa-user-group"></i><span
+            class="app-menu__label">Data
+            Pelanggan</span></a>
+      </li>
+      <li>
+        <a class="app-menu__item " href="pelaporan.html"><i class="app-menu__icon fa-solid fa-book"></i><span
+            class="app-menu__label">Pelaporan</span></a>
+      </li>
+      <li>
+        <a class="app-menu__item " href="ubah-kata-sandi.html"><i class="app-menu__icon fa-solid fa-gear"></i><span
+            class="app-menu__label">Ubah
+            Kata Sandi</span></a>
+      </li>
+      <li>
+        <a class="app-menu__item " href="#"><i class="app-menu__icon fa-solid fa-arrow-right-from-bracket"></i><span
+            class="app-menu__label">keluar</span></a>
+      </li>
+    </ul>
+    <ul class="app-menu marbo">
+      <li>
+        <a onclick="myFunction()" class="app-menu__item " href="#"><i
+            class="app-menu__icon fa-solid fa-lightbulb "></i><span class="app-menu__label">Mode
+            Gelap</span></a>
+      </li>
+      <li>
+        <span class="app-menu__item" href="#"><i class="app-menu__icon fa-solid fa-copyright copyright"></i><span
+            class="app-menu__label copyright">Copyright PAMDES
+            2022</span></span>
+      </li>
+    </ul>
+  </aside>
+  <main class="app-content">
+    <div class="row">
+      <div class="col-md-6 col-lg-4">
+        <div class="widget-small primary coloured-icon"><i class="icon fa-solid fa-users fa-3x"></i>
+          <div class="info">
+            <h4>Jumlah Pelanggan</h4>
+            <p><b>2892</b></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="widget-small info coloured-icon"><i class="icon fa-solid fa-file fa-3x"></i></i>
+          <div class="info">
+            <h4>Jumalah Berkas</h4>
+            <p><b>56</b></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="widget-small warning coloured-icon"><i class="icon fa-solid fa-user fa-3x"></i>
+          <div class="info">
+            <h4>Jumlah Admin</h4>
+            <h3><b>2</b></h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mb-4">
+      <div class="col">
+        <!-- <a href="#" class="btn btn-info btn-lg m-2"><i class="fa fa-plus-circle" aria-hidden="true"></i>Tambah Data
+          Pelanggan</a>
+        <a href="#" class="btn btn-secondary btn-lg m-2"><i class="fa fa-plus-circle" aria-hidden="true"></i>Tambah
+          Admin
+          Pamdes</a> -->
+        <a href="#" class="btn btn-success btn-lg m-2"><i class="fa fa-print" aria-hidden="true"></i>Cetak Berkas
+          Pelaporan</a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="d-flex">
+          <h4>Riwayat Pembayaran Pelanggan</h4>
+          <a href="#" class="ml-auto tdes" style="color: var(--point)">LIHAT SEMUA</a>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="tile">
+          <div class="table-responsive">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Nomor Pelanggan</th>
+                  <th>Nama Pelanggan</th>
+                  <th>Nominal Pembayaran</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>0192286571125107</td>
+                  <td>Khafiz Hairy</td>
+                  <td>Rp 150,000.00</td>
+                  <td class="green">Sudah Bayar</td>
+                </tr>
+                <tr>
+                  <td>0207644820982731</td>
+                  <td>Ali Kopter</td>
+                  <td>Rp 50,000.00</td>
+                  <td class="green">Sudah Bayar</td>
+                </tr>
+                <tr>
+                  <td>0195663901288213</td>
+                  <td>0195663901288213</td>
+                  <td>Rp 20,000.00</td>
+                  <td class="green">Sudah Bayar</td>
+                </tr>
+                <tr>
+                  <td>0218447263209918</td>
+                  <td>Ical Starmaker</td>
+                  <td>Rp 100,000.00</td>
+                  <td class="green">Sudah Bayar</td>
+                </tr>
+                <tr>
+                  <td>0219273648823761</td>
+                  <td>Agi Warawiri</td>
+                  <td>Rp 200,000.00</td>
+                  <td class="green">Sudah Bayar</td>
+                </tr>
+                <tr>
+                  <td>0229466472001238</td>
+                  <td>Erwin Edi Mulyadi</td>
+                  <td>Rp 500,000.00</td>
+                  <td class="green">Sudah Bayar</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <!-- Essential javascripts for application to work-->
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

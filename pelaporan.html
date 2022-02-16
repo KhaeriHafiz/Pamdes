@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Pelaporan - Pamdes</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Main CSS-->
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <!-- Font-icon css-->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body class="app sidebar-mini">
+    <!-- Navbar-->
+    <header class="app-header">
+        <a class="app-header__logo" href="index.html">
+            <img src="images/logo.png" width="50%" alt="">
+        </a>
+        <!-- Sidebar toggle button--><a class="app-sidebar__toggle" href="#" data-toggle="sidebar"
+            aria-label="Hide Sidebar"></a>
+        <!-- Navbar Right Menu-->
+        <ul class="app-nav">
+
+            <!-- User Menu-->
+            <!-- <li class="dropdown"><a class="app-nav__item" href="#" data-toggle="dropdown" aria-label="Open Profile Menu"><i
+            class="fa fa-user fa-lg" style="color: #bbb"></i></a>
+        <ul class="dropdown-menu settings-menu dropdown-menu-right">
+          <li><a class="dropdown-item" href="page-user.html"><i class="fa fa-cog fa-lg"></i> Settings</a></li>
+          <li><a class="dropdown-item" href="page-user.html"><i class="fa fa-user fa-lg"></i> Profile</a></li>
+          <li><a class="dropdown-item" href="page-login.html"><i class="fa fa-sign-out fa-lg"></i> Logout</a></li>
+        </ul>
+      </li> -->
+            <li><a class="app-nav__item" style="color: var(--point)" href="#" data-toggle="dropdown"
+                    aria-label="Open Profile Menu"><i class="fa-solid fa-calendar-week"></i>
+                    <b>Sabtu, 12
+                        Februari
+                        2022,
+                        22:37 WITA</b></a>
+            </li>
+        </ul>
+    </header>
+    <!-- Sidebar menu-->
+    <div class="app-sidebar__overlay" data-toggle="sidebar"></div>
+    <aside class="app-sidebar">
+        <ul class="app-menu">
+            <li>
+                <a class="app-menu__item" href="index.html"><i class="app-menu__icon fa-solid fa-house"></i><span
+                        class="app-menu__label">Dashboard</span></a>
+            </li>
+            <li>
+                <a class="app-menu__item" href="Pembayaran.html"><i
+                        class=" app-menu__icon fa-solid fa-credit-card"></i><span
+                        class="app-menu__label">Pembayaran</span></a>
+            </li>
+            <li>
+                <a class="app-menu__item" href="data-pelanggan.html"><i
+                        class="app-menu__icon fa-solid fa-user-group"></i><span class="app-menu__label">Data
+                        Pelanggan</span></a>
+            </li>
+            <li>
+                <a class="app-menu__item active" href="pelaporan.html"><i
+                        class="app-menu__icon fa-solid fa-book"></i><span class="app-menu__label">Pelaporan</span></a>
+            </li>
+            <li>
+                <a class="app-menu__item " href="ubah-kata-sandi.html"><i
+                        class="app-menu__icon fa-solid fa-gear"></i><span class="app-menu__label">Ubah
+                        Kata Sandi</span></a>
+            </li>
+            <li>
+                <a class="app-menu__item " href="#"><i
+                        class="app-menu__icon fa-solid fa-arrow-right-from-bracket"></i><span
+                        class="app-menu__label">keluar</span></a>
+            </li>
+        </ul>
+        <ul class="app-menu marbo">
+            <li>
+                <a onclick="myFunction()" class="app-menu__item " href="#"><i
+                        class="app-menu__icon fa-solid fa-lightbulb "></i><span class="app-menu__label">Mode
+                        Gelap</span></a>
+            </li>
+            <li>
+                <span class="app-menu__item" href="#"><i
+                        class="app-menu__icon fa-solid fa-copyright copyright"></i><span
+                        class="app-menu__label copyright">Copyright PAMDES
+                        2022</span></span>
+            </li>
+        </ul>
+    </aside>
+    <main class="app-content">
+        <div class="row mb-2">
+            <div class="col-md-12">
+                <h4>Daftar Berkas Pelaporan</h4>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Temukan Berkas Terkait"
+                        aria-label="Temukan Berkas Terkait" aria-describedby="button-addon2">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-suci" type="button" id="button-addon2">Cari Berkas</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <h4>Rincian Data Pelanggan</h4>
+            </div>
+            <div class="col-md-12">
+                <div class="tile">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Nama Berkas</th>
+                                    <th>Deskripsi</th>
+                                    <th>Tanggal</th>
+                                    <th>Unduh</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Data Pelanggan 2018</td>
+                                    <td>Berisi data pelanggan PAMDES Pringgasela tahun 2018</td>
+                                    <td>Dimodifikasi pada 16/04/2018</td>
+                                    <td>
+                                        <div class="dropdown">
+                                            <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                                                data-toggle="dropdown" aria-expanded="false">
+                                                Unduh Berkas
+                                            </a>
+
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                                <a class="dropdown-item" href="#">PDF</a>
+                                                <a class="dropdown-item" href="#">Excel (.xls)</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Data Pelanggan 2019</td>
+                                    <td>Berisi data pelanggan PAMDES Pringgasela tahun 2019</td>
+                                    <td>Dimodifikasi pada 20/07/2019</td>
+                                    <td>
+                                        <div class="dropdown">
+                                            <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                                                data-toggle="dropdown" aria-expanded="false">
+                                                Unduh Berkas
+                                            </a>
+
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                                <a class="dropdown-item" href="#">PDF</a>
+                                                <a class="dropdown-item" href="#">Excel (.xls)</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Data Pelanggan 2020</td>
+                                    <td>Berisi data pelanggan PAMDES Pringgasela tahun 2020</td>
+                                    <td>Dimodifikasi pada 01/11/2020</td>
+                                    <td>
+                                        <div class="dropdown">
+                                            <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                                                data-toggle="dropdown" aria-expanded="false">
+                                                Unduh Berkas
+                                            </a>
+
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                                <a class="dropdown-item" href="#">PDF</a>
+                                                <a class="dropdown-item" href="#">Excel (.xls)</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Data Pelanggan 2021</td>
+                                    <td>Berisi data pelanggan PAMDES Pringgasela tahun 2021</td>
+                                    <td>Dimodifikasi pada 03/08/2021</td>
+                                    <td>
+                                        <div class="dropdown">
+                                            <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                                                data-toggle="dropdown" aria-expanded="false">
+                                                Unduh Berkas
+                                            </a>
+
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                                <a class="dropdown-item" href="#">PDF</a>
+                                                <a class="dropdown-item" href="#">Excel (.xls)</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Data Pelanggan 2022</td>
+                                    <td>Berisi data pelanggan PAMDES Pringgasela tahun 2022</td>
+                                    <td>Dimodifikasi pada 04/01/2022</td>
+                                    <td>
+                                        <div class="dropdown">
+                                            <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                                                data-toggle="dropdown" aria-expanded="false">
+                                                Unduh Berkas
+                                            </a>
+
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                                <a class="dropdown-item" href="#">PDF</a>
+                                                <a class="dropdown-item" href="#">Excel (.xls)</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- pagination -->
+                <div class="d-flex">
+                    <div class="mx-auto">
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination">
+                                <li class="page-item jarak">
+                                    <a class="page-link" href="#">
+                                        <i class="fa-solid fa-angle-left"></i>
+                                    </a>
+                                </li>
+                                <li class="page-item jarak"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item jarak"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item jarak"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item jarak">
+                                    <a class="page-link" href="#">
+                                        <i class="fa-solid fa-angle-right"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <!-- end paginations -->
+            </div>
+        </div>
+    </main>
+    <!-- Essential javascripts for application to work-->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

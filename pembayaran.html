@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Kartu Pelanggan - Pamdes</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Main CSS-->
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <!-- Font-icon css-->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body class="app sidebar-mini">
+    <!-- Navbar-->
+    <header class="app-header">
+        <a class="app-header__logo" href="index.html">
+            <img src="images/logo.png" width="50%" alt="">
+        </a>
+        <!-- Sidebar toggle button--><a class="app-sidebar__toggle" href="#" data-toggle="sidebar"
+            aria-label="Hide Sidebar"></a>
+        <!-- Navbar Right Menu-->
+        <ul class="app-nav">
+
+            <!-- User Menu-->
+            <!-- <li class="dropdown"><a class="app-nav__item" href="#" data-toggle="dropdown" aria-label="Open Profile Menu"><i
+            class="fa fa-user fa-lg" style="color: #bbb"></i></a>
+        <ul class="dropdown-menu settings-menu dropdown-menu-right">
+          <li><a class="dropdown-item" href="page-user.html"><i class="fa fa-cog fa-lg"></i> Settings</a></li>
+          <li><a class="dropdown-item" href="page-user.html"><i class="fa fa-user fa-lg"></i> Profile</a></li>
+          <li><a class="dropdown-item" href="page-login.html"><i class="fa fa-sign-out fa-lg"></i> Logout</a></li>
+        </ul>
+      </li> -->
+            <li><a class="app-nav__item" style="color: var(--point)" href="#" data-toggle="dropdown"
+                    aria-label="Open Profile Menu"><i class="fa-solid fa-calendar-week"></i>
+                    <b>Sabtu, 12
+                        Februari
+                        2022,
+                        22:37 WITA</b></a>
+            </li>
+        </ul>
+    </header>
+    <!-- Sidebar menu-->
+    <div class="app-sidebar__overlay" data-toggle="sidebar"></div>
+    <aside class="app-sidebar">
+        <ul class="app-menu">
+            <li>
+                <a class="app-menu__item" href="index.html"><i class="app-menu__icon fa-solid fa-house"></i><span
+                        class="app-menu__label">Dashboard</span></a>
+            </li>
+            <li>
+                <a class="app-menu__item active" href="Pembayaran.html"><i
+                        class=" app-menu__icon fa-solid fa-credit-card"></i><span
+                        class="app-menu__label">Pembayaran</span></a>
+            </li>
+            <li>
+                <a class="app-menu__item" href="data-pelanggan.html"><i
+                        class="app-menu__icon fa-solid fa-user-group"></i><span class="app-menu__label">Data
+                        Pelanggan</span></a>
+            </li>
+            <li>
+                <a class="app-menu__item " href="pelaporan.html"><i class="app-menu__icon fa-solid fa-book"></i><span
+                        class="app-menu__label">Pelaporan</span></a>
+            </li>
+            <li>
+                <a class="app-menu__item " href="ubah-kata-sandi.html"><i
+                        class="app-menu__icon fa-solid fa-gear"></i><span class="app-menu__label">Ubah
+                        Kata Sandi</span></a>
+            </li>
+            <li>
+                <a class="app-menu__item " href="#"><i
+                        class="app-menu__icon fa-solid fa-arrow-right-from-bracket"></i><span
+                        class="app-menu__label">keluar</span></a>
+            </li>
+        </ul>
+        <ul class="app-menu marbo">
+            <li>
+                <a onclick="myFunction()" class="app-menu__item " href="#"><i
+                        class="app-menu__icon fa-solid fa-lightbulb "></i><span class="app-menu__label">Mode
+                        Gelap</span></a>
+            </li>
+            <li>
+                <span class="app-menu__item" href="#"><i
+                        class="app-menu__icon fa-solid fa-copyright copyright"></i><span
+                        class="app-menu__label copyright">Copyright PAMDES
+                        2022</span></span>
+            </li>
+        </ul>
+    </aside>
+    <main class="app-content">
+        <div class="row mb-2">
+            <div class="col-md-12">
+                <h4>Kartu Pelanggan PAMDES</h4>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Masukan nomor kartu pelanggan"
+                        aria-label="Masukan nomor kartu pelanggan" aria-describedby="button-addon2">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-suci" type="button" id="button-addon2">Akses Kartu</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <h4>Rincian Data Pelanggan</h4>
+            </div>
+            <div class="col-md-12">
+                <div class="tile">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Nomor Kartu</th>
+                                    <th>Nama Pelanggan</th>
+                                    <th>Tunggakan</th>
+                                    <th>Nominal Pembayaran</th>
+                                    <th>Status</th>
+                                    <th>Tanggal Daftar</th>
+                                    <th>Tanggal Bayar</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 d-flex ">
+                <button type="button" class="btn btn-light ml-auto disabled">Cetak Struck Transaksi</button>
+                <a href="#demo-modal" type="button" class="btn btn-light ml-2">konfirmasi Pembayaran</a>
+            </div>
+            <!-- modal -->
+            <div id="demo-modal" class="modal">
+                <div class="modal__content">
+                    <div class="d-flex">
+                        <img src="images/logo.png" width="30%" class="img-responsive mr-auto">
+                        <h5>Sabtu, 12 Februari 2022, 22:37 WITA</h5>
+                    </div>
+
+                    <div class="mt-5">
+                        <div class="d-flex">
+                            <h5><b>Nomor Kartu</b></h5>
+                            <h5 class="abu ml-5">0192837645332009217</h5>
+                        </div>
+                        <div class="d-flex">
+                            <h5><b>Nama Pelanggan</b></h5>
+                            <h5 class="abu ml-5">Fendi Ngilang</h5>
+                        </div>
+                        <div class="d-flex">
+                            <h5><b>Nominal Pemabyaran</b></h5>
+                            <h5 class="abu ml-5">Rp 120,000.00</h5>
+                        </div>
+                    </div>
+
+                    <div class="mt-3 d-flex">
+                        <button type="button" class="btn btn-outline-info ml-3">
+                            <i class="fa fa-check" aria-hidden="true"></i>
+                            Cetak StruckTransaksi
+                        </button>
+                        <button type="button" class="btn btn-outline-danger ml-3">
+                            <i class="fa fa-times" aria-hidden="true"></i>
+                            Batalkan Pembayaran
+                        </button>
+                    </div>
+
+
+                    <a href="#" class="modal__close">&times;</a>
+                </div>
+            </div>
+            <!-- end Modal -->
+        </div>
+    </main>
+    <!-- Essential javascripts for application to work-->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
