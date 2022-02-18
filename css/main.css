@@ -40,6 +40,7 @@
   --point: #3C5B80;
   --table-point: #000000;
   --copy: #000;
+  --logo: 80%;
   /* end custom */
   --breakpoint-xs: 0;
   --breakpoint-sm: 576px;
@@ -627,10 +628,17 @@ pre code {
   margin-left: auto;
 }
 
+/* @media (min-width: 412px) {
+  .app-logo {
+    width: 50%;
+  }
+} */
+
 @media (min-width: 576px) {
   .container {
     max-width: 540px;
   }
+
 }
 
 @media (min-width: 768px) {
@@ -18090,4 +18098,7 @@ be a descendant of the grid when it is being dragged.
   color: #D9534F;
 }
 
-/* dark theme */
+.app-logo {
+  width: 160px;
+  height: 36px;
+}
