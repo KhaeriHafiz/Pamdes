@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="container mt-5">
+        <h1 class="text-center mb-5">Simpel calcul</h1>
+        <form>
+            <div class="form-row">
+                <div class="col">
+                    <input type="number" class="form-control qty" value="0" id="numb">
+                </div>
+                <div class="col">
+                    <h4 id="total_value">0</h4>
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+    <!-- sss -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+
+
+    <script>
+        function calculateTotal() {
+            let unit_price = {
+                air: 500
+            };
+            let item_price = {}
+
+            item_price.air = ($("#numb").val() * unit_price.air)
+            // $("#price_air").val(item_price.air);
+
+            let total = item_price.air;
+
+
+            $("#total_value").text(total);
+
+        }
+
+        $(function () {
+            $(".qty").on("change keyup", calculateTotal)
+        })
+    </script>
+</body>
+
+</html>
