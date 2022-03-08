@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="css/vendor/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="css/main.css">
     <title>Document</title>
 </head>
 
@@ -19,6 +20,13 @@
                     <input type="number" class="form-control qty" value="0" id="numb">
                 </div>
                 <div class="col">
+                    <input type="number" class="form-control" readonly value="0" id="price_air" />
+                </div>
+                <div class="col">
+                    <input type='text' class="form-control" id='datepicker' placeholder='Select date'
+                        style='width: 100%;'>
+                </div>
+                <div class="col">
                     <h4 id="total_value">0</h4>
                 </div>
             </div>
@@ -27,8 +35,20 @@
 
 
     <!-- sss -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src='js/plugins/bootstrap-datepicker.min.js' type='text/javascript'></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            // Initialize
+            $('#datepicker').datepicker({
+                // "startDate": "-5d",
+                "keyboardNavigation": false,
+                "format": "yyyy",
+                "viewMode": "years",
+                "minViewMode": "years"
+            });
+
+        });
+    </script>
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
@@ -43,7 +63,7 @@
             let item_price = {}
 
             item_price.air = ($("#numb").val() * unit_price.air)
-            // $("#price_air").val(item_price.air);
+            $("#price_air").val(item_price.air);
 
             let total = item_price.air;
 
@@ -55,6 +75,8 @@
         $(function () {
             $(".qty").on("change keyup", calculateTotal)
         })
+
+
     </script>
 </body>
 

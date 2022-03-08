@@ -258,8 +258,8 @@ iframe {
 }
 
 .container-login100 {
-    width: 100%;
-    min-height: 100vh;
+    /* width: 100%;
+    min-height: 100vh; */
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-box;
@@ -321,6 +321,8 @@ iframe {
     display: block;
     /* background-color: #f7f7f7; */
     padding: 93px 55px 55px 55px;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 .login100-form-title {
@@ -347,7 +349,7 @@ iframe {
     flex-wrap: wrap;
     align-items: flex-end;
     width: 100%;
-    height: 80px;
+    height: 50px;
     position: relative;
     border: 1px solid #e6e6e6;
     border-radius: 10px;
