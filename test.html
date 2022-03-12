@@ -17,38 +17,27 @@
         <form>
             <div class="form-row">
                 <div class="col">
+                    <h5>Masukan Meter Air</h5>
                     <input type="number" class="form-control qty" value="0" id="numb">
                 </div>
                 <div class="col">
+                    <h5>Harga Meter Air</h5>
                     <input type="number" class="form-control" readonly value="0" id="price_air" />
                 </div>
                 <div class="col">
-                    <input type='text' class="form-control" id='datepicker' placeholder='Select date'
-                        style='width: 100%;'>
+                    <h5>Masukan Jumlah Uang</h5>
+                    <input type="number" class="form-control qty" value="0" id="kembali">
                 </div>
                 <div class="col">
-                    <h4 id="total_value">0</h4>
+                    <h5>Kembalianya Mas !</h5>
+                    <h4 class="form-control" id="total_value">0</h4>
                 </div>
             </div>
         </form>
     </div>
 
 
-    <!-- sss -->
-    <script src='js/plugins/bootstrap-datepicker.min.js' type='text/javascript'></script>
-    <script type="text/javascript">
-        $(document).ready(function () {
-            // Initialize
-            $('#datepicker').datepicker({
-                // "startDate": "-5d",
-                "keyboardNavigation": false,
-                "format": "yyyy",
-                "viewMode": "years",
-                "minViewMode": "years"
-            });
 
-        });
-    </script>
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
@@ -58,14 +47,18 @@
     <script>
         function calculateTotal() {
             let unit_price = {
-                air: 500
+                air: 500,
+                hit: 1
             };
             let item_price = {}
 
             item_price.air = ($("#numb").val() * unit_price.air)
             $("#price_air").val(item_price.air);
 
-            let total = item_price.air;
+            item_price.hit = ($("#kembali").val() * unit_price.hit)
+            $("#price_hit").val(item_price.hit);
+
+            let total = item_price.hit - item_price.air;
 
 
             $("#total_value").text(total);

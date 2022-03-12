@@ -18105,3 +18105,12 @@ be a descendant of the grid when it is being dragged.
 
 
 /* tets */
+
+.user-ico {
+  border: 2px solid;
+  border-radius: 2.75rem;
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
